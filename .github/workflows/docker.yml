@@ -32,7 +32,7 @@ jobs:
         push: "false"
         github: "true"
         token: ${{ secrets.token }}
-        owner: ${{ github.repository_owner }}
+        owner: "solairen"
   #Push_Image:
   #  needs: Test_Image
   #  runs-on: ubuntu-latest
