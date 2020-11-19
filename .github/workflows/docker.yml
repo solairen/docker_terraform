@@ -27,8 +27,8 @@ jobs:
         path: .github/actions/solairen/docker_terraform
     - name: login to GitHub registry
       run: docker login docker.pkg.github.com -u ${{ github.repository_owner }} -p ${{ secrets.token }}
-    #- name: KURA
-    #  run: docker pull docker.pkg.github.com/solairen/flake/flake:1.0 
+    - name: get flake image
+      run: docker pull docker.pkg.github.com/solairen/flake/flake:1.0 
     - name: test docker image
       uses: ./.github/actions/solairen/docker_tag
       with:
