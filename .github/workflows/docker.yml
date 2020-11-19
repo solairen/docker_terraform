@@ -31,7 +31,7 @@ jobs:
         tag_latest: "false"
         push: "false"
         github: "true"
-        token: ${{ secrets.token }}
+        gh_token: ${{ secrets.token }}
         owner: ${{ github.repository_owner }}
   #Push_Image:
   #  needs: Test_Image
