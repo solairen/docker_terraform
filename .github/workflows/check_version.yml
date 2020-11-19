@@ -9,6 +9,8 @@ jobs:
   Check_Version:
     runs-on: ubuntu-latest
     steps:
+    - name: Login to GitHub registry
+      run: docker login docker.pkg.github.com -u ${{ github.repository_owner }} -p ${{ secrets.token }}
     - name: Get version_checker repository
       uses: actions/checkout@v2
       with:
