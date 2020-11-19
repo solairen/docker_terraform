@@ -10,17 +10,21 @@ jobs:
   Test_Image:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
     - name: get docker_tag repository
       uses: actions/checkout@v2
       with:
         repository: solairen/docker_tag
-        ref: master
+        ref: new_functionality
         token: ${{ secrets.token }}
         path: .github/actions/solairen/docker_tag
     - name: check path
-      run: "pwd"
-    - name: Login to GitHub registry
+      uses: actions/checkout@v2
+      with:
+        repository: solairen/terraform
+        ref: main
+        token: ${{ secrets.token }}
+        path: .github/actions/solairen/docker_terraform
+    - name: login to GitHub registry
       run: docker login docker.pkg.github.com -u ${{ github.repository_owner }} -p ${{ secrets.token }}
     - name: test docker image
       uses: ./.github/actions/solairen/docker_tag
@@ -30,6 +34,7 @@ jobs:
         repository: "moleszek/terraform"
         tag_latest: "false"
         push: "false"
+        path: .github/actions/solairen/docker_terraform
   #Push_Image:
   #  needs: Test_Image
   #  runs-on: ubuntu-latest
