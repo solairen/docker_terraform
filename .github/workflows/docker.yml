@@ -10,9 +10,7 @@ jobs:
   Test_Image:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Login to GitHub registry
-      run: docker login docker.pkg.github.com -u ${{ github.repository_owner }} -p ${{ secrets.token }}
+    - uses: actions/checkout@master    
     - name: get docker_tag repository
       uses: actions/checkout@v2
       with:
@@ -20,6 +18,8 @@ jobs:
         ref: master
         token: ${{ secrets.token }}
         path: .github/actions/solairen/docker_tag
+    - name: Login to GitHub registry
+      run: docker login docker.pkg.github.com -u ${{ github.repository_owner }} -p ${{ secrets.token }}
     - name: test docker image
       uses: ./.github/actions/solairen/docker_tag
       with:
