@@ -19,7 +19,7 @@ jobs:
         token: ${{ secrets.token }}
         path: .github/actions/solairen/docker_tag
     - name: test
-      run: "ls -la"
+      run: "cat Dockerfile"
     - name: test docker image
       uses: ./.github/actions/solairen/docker_tag
       with:
