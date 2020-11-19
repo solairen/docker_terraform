@@ -1,8 +1,5 @@
 name: Check terraform version
 on:
-  push:
-    branches:
-      - auto_update
   #schedule:
   #  - cron: '0 8 * * 7'
 jobs:
