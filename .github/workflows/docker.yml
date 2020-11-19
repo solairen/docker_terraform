@@ -1,6 +1,8 @@
 name: Pubish docker image
 on:
-  repository_dispatch
+  push:
+    branches:
+      - auto_update
   #release:
   #  types: 
   #    - published
