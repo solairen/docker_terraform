@@ -1,4 +1,4 @@
-FROM moleszek/flake:1.2
+FROM docker.pkg.github.com/solairen/flake/flake:1.0
 
 LABEL maintainer="michal.oleszek@outlook.com"
 ARG version=0.13.4

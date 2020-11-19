@@ -1,0 +1,32 @@
+name: Check terraform version
+on:
+  repository_dispatch
+  #schedule:
+  #  - cron: '0 8 * * 7'
+jobs:
+  Check_Version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get version_checker repository
+      uses: actions/checkout@v2
+      with:
+        repository: solairen/version_checker
+        ref: main
+        token: ${{ secrets.token }}
+        path: .github/actions/solairen/version_checker
+    - name: Update dockerfile
+      uses: ./.github/actions/solairen/version_checker
+      with:
+        component: terraform
+        path: ./.github/actions/solairen/docker_terraform
+        token: ${{ secrets.token }}
+    #- name: Push changes to docker_terraform repository
+    #  uses: actions-js/push@master
+    #  with:
+    #    github_token: ${{ secrets.token }}
+    #    author_email: michal.oleszek@outlook.com
+    #    author_name: ${{ github.repository_owner }}
+    #    message: updated image version
+    #    branch: main
+    #    directory: .github/actions/solairen/docker_terraform
+    #    repository: solairen/docker_terraform
