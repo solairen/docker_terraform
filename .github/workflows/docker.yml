@@ -18,13 +18,6 @@ jobs:
         ref: master
         token: ${{ secrets.token }}
         path: .github/actions/solairen/docker_tag
-    - name: get docker_terraform repository
-      uses: actions/checkout@v2
-      with:
-        repository: solairen/docker_terraform
-        ref: main
-        token: ${{ secrets.token }}
-        path: .github/actions/solairen/docker_terraform
     - name: login to GitHub registry
       run: docker login docker.pkg.github.com -u ${{ github.repository_owner }} -p ${{ secrets.token }}
     - name: get flake image
