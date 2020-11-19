@@ -34,7 +34,7 @@ jobs:
         repository: "moleszek/terraform"
         tag_latest: "false"
         push: "false"
-        path: .github/actions/solairen/docker_terraform/
+        path: ./.github/actions/solairen/docker_terraform/
   #Push_Image:
   #  needs: Test_Image
   #  runs-on: ubuntu-latest
