@@ -1,7 +1,7 @@
 name: Check terraform version
 on:
-  #schedule:
-  #  - cron: '0 8 * * 7'
+  schedule:
+    - cron: '0 8 * * 7'
 jobs:
   Check_Version:
     runs-on: ubuntu-latest
@@ -28,13 +28,13 @@ jobs:
         component: terraform
         path: ./.github/actions/solairen/docker_terraform
         token: ${{ secrets.token }}
-    #- name: push changes to docker_terraform repository
-    #  uses: actions-js/push@master
-    #  with:
-    #    github_token: ${{ secrets.token }}
-    #    author_email: michal.oleszek@outlook.com
-    #    author_name: ${{ github.repository_owner }}
-    #    message: updated image version
-    #    branch: main
-    #    directory: .github/actions/solairen/docker_terraform
-    #    repository: solairen/docker_terraform
+    - name: push changes to docker_terraform repository
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.token }}
+        author_email: michal.oleszek@outlook.com
+        author_name: ${{ github.repository_owner }}
+        message: updated image version
+        branch: main
+        directory: .github/actions/solairen/docker_terraform
+        repository: solairen/docker_terraform

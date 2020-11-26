@@ -3,8 +3,6 @@
 
 This docker container contains:
 * [Terraform](https://www.terraform.io/)
-* [GoLang](https://golang.org/)
-* [Proxmox](https://www.proxmox.com)
 
 ### How to build or download:
 #### To build docker images from Dockerfile:
