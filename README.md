@@ -12,7 +12,4 @@ This docker container contains:
 * docker pull moleszek/terraform:1.0
 
 ### To run terraform script using terraform Docker image directly:
-* docker run -it --rm -v {localFolderPath}:/home -w /home moleszek/terraform:1.0 {terraformScript}.tf
-
-### To run terraform script using docker-compose:
-* docker-compose run --rm terraform {terraformScript}.tf
+* docker run -it --rm -v {localFolderPath}:/home -w /home moleszek/terraform:1.0 `<terraform command>`
