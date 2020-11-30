@@ -1,7 +1,7 @@
 FROM docker.pkg.github.com/solairen/flake/flake:1.0
 
 LABEL maintainer="michal.oleszek@outlook.com"
-ARG version=0.13.4
+ARG version=0.13.5
 
 RUN mkdir /terraform
 WORKDIR /terraform
