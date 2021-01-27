@@ -1,4 +1,4 @@
-FROM moleszek/flake:1.0
+FROM moleszek/flake:1.1
 
 LABEL maintainer="michal.oleszek@outlook.com"
 ARG version=0.14.5
