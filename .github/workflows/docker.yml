@@ -49,10 +49,10 @@ jobs:
         github: true
         token: ${{ secrets.token }}
         owner: ${{ github.repository_owner }}
-    - name: Update Docker README
-      uses: peter-evans/dockerhub-description@v2.1.0
-      env:
-        DOCKERHUB_USERNAME: ${{ secrets.docker_username }}
-        DOCKERHUB_PASSWORD: ${{ secrets.docker_password }}
-        DOCKERHUB_REPOSITORY: moleszek/terraform
-        README_FILEPATH: README.md
+    #- name: Update Docker README
+    #  uses: peter-evans/dockerhub-description@v2.1.0
+    #  env:
+    #    DOCKERHUB_USERNAME: ${{ secrets.docker_username }}
+    #    DOCKERHUB_PASSWORD: ${{ secrets.docker_password }}
+    #    DOCKERHUB_REPOSITORY: moleszek/terraform
+    #    README_FILEPATH: README.md
