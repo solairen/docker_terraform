@@ -5,7 +5,7 @@ This docker container contains:
 * [Terraform](https://www.terraform.io/)
 
 ### Tag version
-Check latest container tag [version](https://hub.docker.com/repository/docker/moleszek/terraform) and change **<x.x>** with proper tag version.
+Check latest container tag [version](https://hub.docker.com/r/moleszek/terraform/tags?page=1&ordering=last_updated) and change **<x.x>** with proper tag version.
 
 ### How to build or download:
 #### To build docker images from Dockerfile:
