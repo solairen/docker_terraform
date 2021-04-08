@@ -15,4 +15,4 @@ Check latest container tag [version](https://hub.docker.com/r/moleszek/terraform
 * docker pull moleszek/terraform:<x.x>
 
 ### To run terraform script using terraform Docker image directly:
-* docker run -it --rm -v {localFolderPath}:/home -w /home moleszek/terraform:<x.x> `<terraform command>`
+* docker run -it --rm -v {localFolderPath}:/terraform moleszek/terraform:<x.x> `<terraform command>`
