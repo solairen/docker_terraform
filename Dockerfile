@@ -1,7 +1,7 @@
 FROM moleszek/flake:1.1
 
 LABEL maintainer="michal.oleszek@outlook.com"
-ARG version=0.11.15
+ARG version=
 
 RUN mkdir /terraform
 WORKDIR /terraform
